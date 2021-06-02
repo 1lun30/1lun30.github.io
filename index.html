@@ -33,6 +33,11 @@
         background-position: center;
         border-radius: 50%;
       }
+
+      .about-menu {
+        right: 0;
+        left: auto;
+      }
     </style>
   </head>
   <body>
@@ -97,10 +102,26 @@
             <a class="nav-link" href="#">Mind Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <div class="dropdown">
+              <button
+                class="btn btn-link text-dark dropdown-toggle"
+                type="button"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                About
+              </button>
+              <div
+                class="dropdown-menu about-menu"
+                aria-labelledby="dropdownMenu1"
+              >
+                <a class="dropdown-item" href="#!">Why to choose</a>
+                <a class="dropdown-item" href="#!">Slogans</a>
+                <a class="dropdown-item" href="#!">Marketing Plan</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -164,7 +185,7 @@
         </div>
       </div>
     </section>
-    <section class="explore" id="explore">
+    <section class="explore bg-light" id="explore">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -236,7 +257,6 @@
         </div>
       </div>
     </section>
-    <hr />
     <section class="sol" id="sol">
       <div class="container">
         <div class="row">
@@ -261,7 +281,7 @@
       </div>
     </section>
 
-    <section id="xmind" class="xmind">
+    <section id="xmind" class="xmind bg-light">
       <div class="container">
         <div class="row">
           <div class="col-12"><div class="h1 text-center">MIND MAP</div></div>
@@ -290,7 +310,7 @@
             <div class="h1 text-center mb-5">ABOUT</div>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row">
           <div class="col-6" v-for="item in list">
             <div class="text-center">
               <div
@@ -300,6 +320,41 @@
               <div>
                 <p>{{item.content}}</p>
               </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="content text-center mb-5">
+              <p class="p h4 font-weight-light">
+                We're from LungHwa University of science and technology
+                students, and majored in the Department of Applied Foreign
+                Language. We want to through this website and let everyone know
+                that the youth unemployment rate in Taiwan is extremely
+                increasing.
+              </p>
+            </div>
+            <div class="h3">Why we want to choose this topic?</div>
+            <div class="content mb-5">
+              <p class="p">
+                Since we are about to enter the workplace, the new coronavirus
+                outbreak is continuing to grow. In fact, many companies are
+                reluctant to hire young workers, so let us explore youth
+                unemployment and how to solve the problem.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="h2">Slogans</div>
+            <div class="h3 text-center mb-5">YOUTH PEOPLE, WE RESCUED</div>
+            <div class="h3">Marketing Plan</div>
+            <div class="content">
+              <p class="p">
+                Since we are about to enter the workplace, the new coronavirus
+                outbreak is continuing to grow. In fact, many companies are
+                reluctant to hire young workers, so let us explore youth
+                unemployment and how to solve the problem.
+              </p>
             </div>
           </div>
         </div>
@@ -439,6 +494,11 @@
           ],
         },
       });
+      // git add .
+      // git commit -m "修改名稱"
+      // git push
+      //
+      // git status
     </script>
   </body>
 </html>
