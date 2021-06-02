@@ -88,17 +88,17 @@
                 Exploration
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <a class="dropdown-item" href="#!">Financial Crisis</a>
-                <a class="dropdown-item" href="#!">Taiwan's Influence</a>
-                <a class="dropdown-item" href="#!">Unemployment rate rising</a>
+                <a id="finan-item" class="dropdown-item" href="#!">Financial Crisis</a>
+                <a id="influence-item" class="dropdown-item" href="#!">Taiwan's Influence</a>
+                <a id="unemploy-item" class="dropdown-item" href="#!">Unemployment rate rising</a>
               </div>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Solution</a>
+            <a class="nav-link" href="#!">Solution</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Mind Map</a>
+            <a class="nav-link" href="#!">Mind Map</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
@@ -229,7 +229,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="h3">Unemployment rate rising</div>
+            <div id="unemployment-area" class="h3">Unemployment rate rising</div>
             <div class="content" v-for="item in list" data-aos="fade-up">
               <div class="h4">{{item.title}}</div>
               <div class="text-center">
@@ -504,6 +504,24 @@
       $("#causes-item").click(function (){
         $('html, body').animate({
           scrollTop: $("#causes").offset().top - 100
+        }, 500);
+      });
+
+      $("#finan-item").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#explore").offset().top - 100
+        }, 500);
+      });
+
+      $("#influence-item").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#explore").offset().top - 100
+        }, 500);
+      });
+
+      $("#unemploy-item").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#unemployment-area").offset().top - 100
         }, 500);
       });
       // git add .
