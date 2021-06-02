@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - my page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwaneseyouth-unemployment</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -46,7 +47,7 @@
   <body>
     <!-- partial:index.partial.html -->
     <nav class="fixed-top navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Sulun</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -98,10 +99,10 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">Solution</a>
+            <a id="Solu" class="nav-link" href="#!">Solution</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">Mind Map</a>
+            <a id="MP" class="nav-link" href="#!">Mind Map</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
@@ -119,9 +120,9 @@
                 class="dropdown-menu about-menu"
                 aria-labelledby="dropdownMenu1"
               >
-                <a class="dropdown-item" href="#!">Why to choose</a>
-                <a class="dropdown-item" href="#!">Slogans</a>
-                <a class="dropdown-item" href="#!">Marketing Plan</a>
+                <a id="Why" class="dropdown-item" href="#!">Why to choose</a>
+                <a id="slo" class="dropdown-item" href="#!">Slogans</a>
+                <a id="Plan" class="dropdown-item" href="#!">Marketing Plan</a>
               </div>
             </div>
           </li>
@@ -130,13 +131,13 @@
     </nav>
     <div class="jumbotron jumbotron-fluid bg-white text-light" data-aos="fade-up">
       <div class="container">
-        <h1 class="display-3 text-center" data-aos="fade-up">Taiwanese Youth Unemployment</h1>
+        <h1 id="cover" class="display-3 text-center" data-aos="fade-up">Taiwanese Youth Unemployment</h1>
         <p class="lead text-center" data-aos="fade-up">&</p>
         <p class="text-center h2 font-weight-light mb-5" data-aos="fade-up">
           Lack of Job Opportunities
         </p>
         <p class="text-center h4">
-          <i class="far fa-hand-point-down"></i>
+          <i id="down" class="far fa-hand-point-down"></i>
         </p>
       </div>
     </div>
@@ -346,21 +347,30 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="h2">Slogans</div>
+            <div id="slogan" class="h2">Slogans</div>
             <div class="h3 text-center mb-5">YOUTH PEOPLE, WE RESCUED</div>
-            <div class="h3">Marketing Plan</div>
+            <div id="Mar" class="h3 mb-3">Marketing Plan</div>
+            <div class="h3 ">Plan Target:</div>
             <div class="content">
               <p class="p">
-                Since we are about to enter the workplace, the new coronavirus
-                outbreak is continuing to grow. In fact, many companies are
-                reluctant to hire young workers, so let us explore youth
-                unemployment and how to solve the problem.
+                Taiwan is currently facing the crisis of youth unemployment, 
+                besides the new coronavirus outbreak is continuing to grow, 
+                lead to many graduating students are now worried about their future, so we want to help them and use the website we made to understand the current unemployment situation and solutions so that they can find their goals in life.
+              </p>
+            </div>
+            <div class="h3">Objects:</div>
+            <div class="content">
+              <p class="p">
+                Young people in Taiwan between the ages of 18 to 30.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <p class="text-center h4 mb-4">
+      <i id="up" class="fas fa-hand-point-up"></i>
+    </p>
     <!-- partial -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -525,6 +535,47 @@
       $("#unemploy-item").click(function (){
         $('html, body').animate({
           scrollTop: $("#unemployment-area").offset().top - 100
+        }, 500);
+      });
+
+      $("#Solu").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#sol").offset().top - 100
+        }, 500);
+      });
+
+      $("#MP").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#xmind").offset().top - 100
+        }, 500);
+      });
+
+      $("#slo").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#slogan").offset().top - 100
+        }, 500);
+      });
+
+      $("#Why").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#about").offset().top - 100
+        }, 500);
+      });
+
+      $("#Plan").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#Mar").offset().top - 100
+        }, 500);
+      });
+
+      $("#up").click(function (){
+        $('html, body').animate({
+          scrollTop: 0
+        }, 500);
+      });
+      $("#down").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#intro").offset().top - 100
         }, 500);
       });
       // git add .
