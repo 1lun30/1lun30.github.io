@@ -1,1 +1,444 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - my page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .jumbotron {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .avatar {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <nav class="fixed-top navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <div class="dropdown">
+              <button
+                class="btn btn-link text-dark dropdown-toggle"
+                type="button"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Introduction
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Types of Unemployment</a>
+                <a class="dropdown-item" href="#!">Causes</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button
+                class="btn btn-link text-dark dropdown-toggle"
+                type="button"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Exploration
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Financial Crisis</a>
+                <a class="dropdown-item" href="#!">Taiwan's Influence</a>
+                <a class="dropdown-item" href="#!">Unemployment rate rising</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Solution</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mind Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid bg-white">
+      <div class="container">
+        <h1 class="display-3 text-center">Taiwanese Youth Unemployment</h1>
+        <p class="lead text-center">&</p>
+        <p class="text-center h2 font-weight-light mb-5">
+          Lack of Job Opportunities
+        </p>
+        <p class="text-center h4">
+          <i class="far fa-hand-point-down"></i>
+        </p>
+      </div>
+    </div>
+    <section class="intro bg-light" id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <div class="h1 text-center mb-5">INTRODUCTION</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mb-3">
+            <div class="h2">Types of Unemployment</div>
+          </div>
+        </div>
+        <div class="row" v-for="item in list">
+          <div class="col-12">
+            <div class="h3 px-4">
+              <i class="fas fa-bomb mr-2"></i>{{ item.title }}
+            </div>
+            <div class="text-left px-4 pl-5">
+              <p class="pl-3">{{ item.content }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="causes" id="causes">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="h1">Causes</div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4" v-for="item in list">
+            <div class="text-center">
+              <div
+                class="icon"
+                style="font-size: 100px"
+                v-html="item.icon"
+              ></div>
+              <div>
+                <p>{{item.content}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="explore" id="explore">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="h1 text-center">EXPLORATION</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="h2">Financial Crisis</div>
+            <div class="content">
+              <p class="p">
+                The financial crisis of 2007–2008, also known as the global
+                financial crisis (GFC), was a severe worldwide financial crisis.
+                The global youth unemployment rate, from the outbreak of the
+                financial crisis in 2008 to 2009, increased from 11.9% to 12.8%.
+                In just one year, it added 5 million people. In 2011, protests
+                led by youths took place in more than 1,000 cities in 82
+                countries around the world, calling for work and social justice.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="h2" mb-5>Taiwan's Influence</div>
+            <div class="h3">Attenuation of consumption</div>
+            <div class="content">
+              <p class="p">
+                The youth unemployment crisis is changing the dynamics of
+                families, as parents need to continue to support their grown-up
+                children, and unemployed young people delay starting a family,
+                making it more frugal. The Government's efforts to provide
+                unemployment benefits, in which a large number of young people
+                would have become consumers, have suffered from unemployment
+                and, most importantly, youth unemployment is disintegrating
+                young people's belief in education, which has been believed in
+                in the past as the way to a richer life, only to find that their
+                qualifications are not so effective in the bleak job market.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="h3">Unemployment rate rising</div>
+            <div class="content" v-for="item in list">
+              <div class="h4">{{item.title}}</div>
+              <div class="text-center">
+                <img
+                  class="mb-3"
+                  :style="{width: item.imgSize}"
+                  :src="item.img"
+                  alt=""
+                />
+                <p>{{item.desc}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="h3">Poor Employment Status</div>
+            <div class="content">
+              <p class="p">
+                On average, one in eight young people in Taiwan is unemployed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="sol" id="sol">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="h1 text-center">SOLUTIONS</div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6" v-for="item in list">
+            <div class="text-center">
+              <div
+                class="icon"
+                style="font-size: 100px"
+                v-html="item.icon"
+              ></div>
+              <div>
+                <p>{{item.content}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="xmind" class="xmind">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><div class="h1 text-center">MIND MAP</div></div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <div class="text-center">
+                <img
+                  src="https://dl.dropboxusercontent.com/s/nzrydbzkkpoam70/Xmind.png?dl=0"
+                  alt=""
+                  class="mb-3"
+                  style="width: 100%"
+                />
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="h1 text-center mb-5">ABOUT</div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6" v-for="item in list">
+            <div class="text-center">
+              <div
+                class="avatar"
+                :style="{'background-image': 'url(' + item.img + ')'}"
+              ></div>
+              <div>
+                <p>{{item.content}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- partial -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script>
+      var intro = new Vue({
+        el: "#intro",
+        data: {
+          list: [
+            {
+              title: "Technical Unemployment",
+              content: "Unemployment wave caused by technological progress.",
+            },
+            {
+              title: "Frictional Unemployment",
+              content:
+                "In the process of job hunting and changing jobs, short-term unemployment is caused, such as the tide of job hunting for college graduates.",
+            },
+            {
+              title: "Structural Unemployment",
+              content:
+                "Due to changes in the economic structure, advances in production technology and other factors, labor supply cannot match labor demand, such as agriculture.",
+            },
+            {
+              title: "Cyclical Unemployment",
+              content:
+                "Due to changes in the economic cycle, the total demand of the working population decreases, which in turn leads to a surplus of the working population, resulting in involuntary unemployment.",
+            },
+            {
+              title: "Seasonal Unemployment",
+              content:
+                "Some industries are susceptible to seasonal effects, resulting in unemployment, such as tourism.",
+            },
+          ],
+        },
+      });
+      var causes = new Vue({
+        el: "#causes",
+        data: {
+          list: [
+            {
+              icon: '<i class="fas fa-user-shield"></i>',
+              content: "Overprotection of parents",
+            },
+            {
+              icon: '<i class="far fa-grin-stars"></i>',
+              content: "	Work on both sides, self-realization is the first.",
+            },
+            {
+              icon: '<i class="far fa-question-circle"></i>',
+              content:
+                "	Don’t know what I will do, and don’t know what I want to do.",
+            },
+            {
+              icon: '<i class="fab fa-studiovinari"></i>',
+              content: "Habitual freedom! Dislike work discipline.",
+            },
+            {
+              icon: '<i class="fas fa-dollar-sign"></i>',
+              content: "The exploitation of low-paid business.",
+            },
+          ],
+        },
+      });
+      var explore = new Vue({
+        el: "#explore",
+        data: {
+          list: [
+            {
+              title: "Teenager Unemplyment Rate",
+              img: "https://dl.dropboxusercontent.com/s/wlgxgabb0ffj24u/1.jpg?dl=0",
+              desc: "2000-2004",
+              imgSize: "80%",
+            },
+            {
+              title: "",
+              img: "https://dl.dropboxusercontent.com/s/2e64c0zdqbs5mc7/77.jpg?dl=0",
+              desc: "2019-2020",
+              imgSize: "80%",
+            },
+            {
+              title: "Gender Relevance",
+              img: "https://dl.dropboxusercontent.com/s/3hxag3f4ae87x42/3.jpg?dl=0",
+              desc: "Women's salaries are lower than men's.",
+              imgSize: "50%",
+            },
+            {
+              title: "COVID-9",
+              img: "https://dl.dropboxusercontent.com/s/1abcobvpxof84fl/4.jpg?dl=0",
+              desc: "Financial Crisis VS COVID-9",
+              imgSize: "80%",
+            },
+          ],
+        },
+      });
+      var sol = new Vue({
+        el: "#sol",
+        data: {
+          list: [
+            {
+              icon: '<i class="fas fa-clinic-medical"></i>',
+              content: "Employment counseling room",
+            },
+            {
+              icon: '<i class="fas fa-user-tie"></i>',
+              content:
+                "Participating in international volunteering or overseas internship activities",
+            },
+            {
+              icon: '<i class="far fa-laugh-beam"></i>',
+              content: "Mentality adjustment and rebuild our own value",
+            },
+            {
+              icon: '<i class="fab fa-fort-awesome"></i>',
+              content: "Use their core capabilities and competitive advantages",
+            },
+          ],
+        },
+      });
+      var about = new Vue({
+        el: "#about",
+        data: {
+          list: [
+            {
+              img: "https://dl.dropboxusercontent.com/s/fn215hz78fjqie2/doraemon2.jpeg?dl=0",
+              content: "Evonne",
+            },
+            {
+              img: "https://dl.dropboxusercontent.com/s/2cvgg8y0s9ozz0f/panda.jpeg?dl=0",
+              content: "Alice",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
