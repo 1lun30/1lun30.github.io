@@ -48,6 +48,12 @@
           font-size: 45px;
         }
       }
+
+      .slogan {
+        border: 1px solid white;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+      }
     </style>
   </head>
   <body>
@@ -67,6 +73,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="abo" class="nav-link" href="#!">About</a>
+          </li>
           <li class="nav-item active">
             <div class="dropdown">
               <button
@@ -111,42 +120,71 @@
             <a id="MP" class="nav-link" href="#!">Mind Map</a>
           </li>
           <li class="nav-item">
-            <div class="dropdown">
-              <button
-                class="btn btn-link text-dark dropdown-toggle"
-                type="button"
-                id="dropdownMenu1"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                About
-              </button>
-              <div
-                class="dropdown-menu about-menu"
-                aria-labelledby="dropdownMenu1"
-              >
-                <a id="Why" class="dropdown-item" href="#!">Why to choose</a>
-                <a id="slo" class="dropdown-item" href="#!">Slogans</a>
-                <a id="Plan" class="dropdown-item" href="#!">Marketing Plan</a>
-              </div>
-            </div>
+            <a id="Plan" class="nav-link" href="#!">Marketing Plan</a>
           </li>
+          
         </ul>
       </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid bg-white text-light" data-aos="fade-up">
+    <div class="jumbotron jumbotron-fluid bg-white text-light" data-aos="fade-zoom-in">
       <div class="container">
-        <h1 id="cover" class="display-3 text-center" data-aos="fade-up">Taiwanese Youth Unemployment</h1>
-        <p class="lead text-center" data-aos="fade-up">&</p>
-        <p class="text-center h2 font-weight-light mb-5" data-aos="fade-up">
-          Lack of Job Opportunities
+        <h1 id="cover" class="display-3 text-center mb-5" data-aos="fade-up">Taiwanese Youth Unemployment</h1>
+        <p class="text-center h2 font-weight-light mb-5 slogan" 
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
+          YOUTH PEOPLE, WE RESCUE
         </p>
         <p class="text-center h4">
           <i id="down" class="far fa-hand-point-down"></i>
         </p>
       </div>
     </div>
+
+    <section class="about" id="about" data-aos="fade-up">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="h1 text-center mb-5">ABOUT</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6" v-for="item in list">
+            <div class="text-center">
+              <div
+                class="avatar"
+                :style="{'background-image': 'url(' + item.img + ')'}"
+              ></div>
+              <div>
+                <p>{{item.content}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="content text-center mb-5">
+              <p class="p h4 font-weight-light">
+                We're from LungHwa University of science and technology
+                students, and majored in the Department of Applied Foreign
+                Language. We want to through this website and let everyone know
+                that the youth unemployment rate in Taiwan is extremely
+                increasing.
+              </p>
+            </div>
+            <div class="h3">Why we want to choose this topic?</div>
+            <div class="content mb-5">
+              <p class="p">
+                Since we are about to enter the workplace, the new coronavirus
+                outbreak is continuing to grow. In fact, many companies are
+                reluctant to hire young workers, so let us explore youth
+                unemployment and how to solve the problem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="intro bg-light" id="intro" data-aos="fade-up">
       <div class="container">
         <div class="row">
@@ -311,51 +349,21 @@
         </div>
       </div>
     </section>
-    <section class="about" id="about" data-aos="fade-up">
+    <section class="market" id="market" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="h1 text-center mb-5">ABOUT</div>
+            <div class="h1 text-center mb-3">MARKETING PLAN</div>
           </div>
         </div>
         <div class="row">
-          <div class="col-6" v-for="item in list">
-            <div class="text-center">
-              <div
-                class="avatar"
-                :style="{'background-image': 'url(' + item.img + ')'}"
-              ></div>
-              <div>
-                <p>{{item.content}}</p>
-              </div>
-            </div>
-          </div>
+          
           <div class="col-12">
-            <div class="content text-center mb-5">
-              <p class="p h4 font-weight-light">
-                We're from LungHwa University of science and technology
-                students, and majored in the Department of Applied Foreign
-                Language. We want to through this website and let everyone know
-                that the youth unemployment rate in Taiwan is extremely
-                increasing.
+            <div class="content mb-1">
+             
+            
               </p>
-            </div>
-            <div class="h3">Why we want to choose this topic?</div>
-            <div class="content mb-5">
-              <p class="p">
-                Since we are about to enter the workplace, the new coronavirus
-                outbreak is continuing to grow. In fact, many companies are
-                reluctant to hire young workers, so let us explore youth
-                unemployment and how to solve the problem.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div id="slogan" class="h2">Slogans</div>
-            <div class="h3 text-center mb-5">YOUTH PEOPLE, WE RESCUED</div>
-            <div id="Mar" class="h3 mb-3">Marketing Plan</div>
+          
             <div class="h3 ">Plan Target:</div>
             <div class="content">
               <p class="p">
@@ -514,6 +522,12 @@
         },
       });
 
+      $("#abo").click(function (){
+        $('html, body').animate({
+          scrollTop: $("#about").offset().top - 100
+        }, 500);
+      });
+
       $("#intro-item").click(function (){
         $('html, body').animate({
           scrollTop: $("#intro").offset().top - 100
@@ -556,21 +570,9 @@
         }, 500);
       });
 
-      $("#slo").click(function (){
-        $('html, body').animate({
-          scrollTop: $("#slogan").offset().top - 100
-        }, 500);
-      });
-
-      $("#Why").click(function (){
-        $('html, body').animate({
-          scrollTop: $("#about").offset().top - 100
-        }, 500);
-      });
-
       $("#Plan").click(function (){
         $('html, body').animate({
-          scrollTop: $("#Mar").offset().top - 100
+          scrollTop: $("#market").offset().top - 100
         }, 500);
       });
 
@@ -581,7 +583,7 @@
       });
       $("#down").click(function (){
         $('html, body').animate({
-          scrollTop: $("#intro").offset().top - 100
+          scrollTop: $("#about").offset().top - 100
         }, 500);
       });
       // git add .
